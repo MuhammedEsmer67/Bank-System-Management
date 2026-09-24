@@ -504,7 +504,7 @@ public:
 		return Date;
 	}
 
-	clsDate MonthsIncrement(short Months)
+	void MonthsIncrement(short Months)
 	{
 		*this = MonthsIncrement(*this, Months);
 	}

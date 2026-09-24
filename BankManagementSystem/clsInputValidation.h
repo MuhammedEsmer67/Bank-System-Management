@@ -1,4 +1,5 @@
 #pragma once
+#include <limits>
 #include "clsUtility.h"
 
 using namespace std;

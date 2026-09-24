@@ -7,6 +7,19 @@
 
 class clsClient : public clsPerson
 {
+public:
+
+	struct stTransferLogInfo
+	{
+		string Date;
+		string SourceAccountNumber;
+		string DestinationAccountNumber;
+		float TransferAmount;
+		float SourceAccountBalance;
+		float DestinationAccountBalance;
+		string UserName;
+	};
+	
 private:
 
 	enum enMode { EmptyClient = 1, UpdateClient = 2, AddNewClient = 3 };
@@ -16,7 +29,6 @@ private:
 	string _PinCode;
 	float _AccountBalance;
 	bool _MarkToDelete = false;
-	struct stTransferLogInfo;
 
 	static clsClient _ConvertLineToClientObject(string Line, string Delim = "#//#")
 	{
@@ -175,17 +187,6 @@ public:
 		_PinCode = PinCode;
 		_AccountBalance = AccountBalance;
 	}
-
-	struct stTransferLogInfo
-	{
-		string Date;
-		string SourceAccountNumber;
-		string DestinationAccountNumber;
-		float TransferAmount;
-		float SourceAccountBalance;
-		float DestinationAccountBalance;
-		string UserName;
-	};
 
 	void setPinCode(string PinCode) { _PinCode = PinCode; }
 

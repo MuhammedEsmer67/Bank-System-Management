@@ -116,7 +116,7 @@ public:
 
 		clsUser NewUser = clsUser::GetNewUser(UserName);
 
-		cout << "\Add New User:\n\n";
+		cout << "\nAdd New User:\n\n";
 		_ReadUserInfo(NewUser);
 		_PrintUser(NewUser);
 
@@ -148,7 +148,7 @@ public:
 		}
 
 		else
-			cout << "\Adding Failed.\n\n";
+			cout << "\nAdding Failed.\n\n";
 
 	}
 

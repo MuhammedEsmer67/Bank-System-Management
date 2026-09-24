@@ -8,6 +8,16 @@
 
 class clsUser : public clsPerson
 {
+public:
+
+	struct stUserLoginData
+	{
+		string Date;
+		string UserName;
+		string Password;
+		string Permissions;
+	};
+
 private:
 
 	enum enMode { EmptyUser = 1, UpdateUser = 2, AddNewUser = 3 };
@@ -17,7 +27,6 @@ private:
 	string _Password;
 	short _Permissions;
 	bool _MarkToDelete = false;
-	struct stUserLoginData;
 
 	static clsUser _ConvertLineToUserObject(string Line, string Delim = "#//#")
 	{
@@ -159,14 +168,6 @@ public:
 		_Password = Password;
 		_Permissions = Permissions;
 	}
-
-	struct stUserLoginData
-	{
-		string Date;
-		string UserName;
-		string Password;
-		string Permissions;
-	};
 
 	void setUserName(string UserName) { _UserName = UserName; }
 

@@ -41,7 +41,7 @@ public:
 		cout << clsUtility::Tabs(1) << "___________________________________________________________________________________________________________________________\n\n";
 
 		if (vClients.size() == 0)
-			cout << clsUtility::Tabs(7) << "No clients avalaible on the system.\n";
+			cout << clsUtility::Tabs(7) << "No clients available on the system.\n";
 		else
 		{
 			for (clsClient& Client : vClients)
